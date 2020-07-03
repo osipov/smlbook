@@ -1,0 +1,10 @@
+# [Serverless Machine Learning in Action](https://www.manning.com/books/serverless-machine-learning-in-action?a_aid=osipov&a_bid=fa913283&)
+
+## by Carl Osipov
+
+| Chapter | Source Code |
+|---------|-------------|
+|[Chapter 1|n/a|
+|[Chapter 2](https://livebook.manning.com/book/serverless-machine-learning-in-action/chapter-2?a_aid=osipov&a_bid=fa913283&)|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/osipov/smlbook/blob/master/ch2.ipynb]|
+|[Chapter 3]()https://livebook.manning.com/book/serverless-machine-learning-in-action/chapter-3?a_aid=osipov&a_bid=fa913283&|WIP|
+
