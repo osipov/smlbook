@@ -143,8 +143,11 @@ function pyspark_run_job {
     --BUCKET_DST_PATH="'$(
         echo $BUCKET_DST_PATH
       )'",
+    --SAMPLE_SIZE="'$(
+        echo ${SAMPLE_SIZE:-1024}
+      )'",    
     --BINS="'$(
-        echo $BINS
+        echo ${BINS:-1}
       )'",
     --SEED="'$(
         echo ${SEED:-42}
