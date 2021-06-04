@@ -106,6 +106,8 @@ function run_job {
           BUCKET_ID 
           BUCKET_SRC_PATH 
           BUCKET_DST_PATH 
+          SAMPLE_SIZE
+          SAMPLE_COUNT
           BINS 
           SEED )
 
