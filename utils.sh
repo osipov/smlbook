@@ -126,15 +126,14 @@ function pyspark_run_job {
   
   aws glue create-job \
     --name $PYSPARK_JOB_NAME \
-    --role `aws iam get-role \
-    --role-name AWSGlueServiceRole-dc-taxi \
-    --query 'Role.Arn' \
-    --output text` \
-    --default-arguments '{"--TempDir":"s3://dc-taxi-'$BUCKET_ID'-'$AWS_DEFAULT_REGION'/glue/"}' --command '{
+    --role $(aws iam get-role --role-name AWSGlueServiceRole-dc-taxi --query 'Role.Arn' --output text) \
+    --default-arguments '{"--TempDir":"s3://dc-taxi-'$BUCKET_ID'-'$AWS_DEFAULT_REGION'/glue/"}' \
+    --command '{
       "ScriptLocation": "s3://dc-taxi-'$BUCKET_ID'-'$AWS_DEFAULT_REGION'/glue/'$PYSPARK_SRC_NAME'",
       "Name": "glueetl",
       "PythonVersion": "3"
-  }'
+    }' \
+    --glue-version "2.0"
 
   aws glue start-job-run \
     --job-name $PYSPARK_JOB_NAME \
