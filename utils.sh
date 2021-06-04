@@ -143,6 +143,9 @@ function pyspark_run_job {
     --BUCKET_DST_PATH="'$(
         echo $BUCKET_DST_PATH
       )'",
+    --SAMPLE_COUNT="'$(
+        echo ${SAMPLE_COUNT:-1}
+      )'",    
     --SAMPLE_SIZE="'$(
         echo ${SAMPLE_SIZE:-1024}
       )'",    
