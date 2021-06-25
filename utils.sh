@@ -156,6 +156,9 @@ function pyspark_run_job {
       )'",
     --SEED="'$(
         echo ${SEED:-42}
+      )'",
+    --additional-python-modules="'$(
+        echo $ADDITIONAL_PYTHON_MODULES
       )'"'
 
   printf "Waiting for the job to finish..."
